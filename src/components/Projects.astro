@@ -1,0 +1,25 @@
+---
+const PROJECTS = [
+   {
+    title: "Proyecto 1",
+    description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore recusandae modi praesentium possimus tempora, dicta dignissimos consectetur provident ipsam corrupti eius commodi consequatur atque eveniet, earum expedita impedit enim itaque?",
+    link:'#',
+    github:'#',
+    image: "link",
+    tags: ['html',"css","JavaScript"]
+   } 
+]
+---
+{
+    PROJECTS.map(({ title, description, tags}) => (
+        <article>
+            <h3>{title}</h3>
+            <p>{description}</p>
+            <ul>
+               {tags.map(tag => (
+                    <li>{tag}</li>
+                ))}
+            </ul>
+        </article>
+    ))
+}

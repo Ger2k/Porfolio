@@ -1,0 +1,72 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+import Badge from '../components/Badge.astro';
+import LinkedInIcon from '../components/icons/LinkedIn.astro';
+import GitHubIcon from '../components/icons/Github.astro';
+import MailIcon from '../components/icons/Mail.astro';
+import SocialPill from '../components/SocialPill.astro';
+import Experience from "../components/Experience.astro";
+import Projects from "../components/Projects.astro";
+import SectionContainer from "../components/SectionContainer.astro";
+import EstudiosIcon from '../components/icons/Estudios.astro'
+import CodeIcon from '../components/icons/Code.astro'
+---
+
+<Layout title="Porfolio de Ger - Desarrollador y Programador Web" description='Contrata a Ger para crear tu aplicación web o móvil'>
+	<main class="px-4">
+		<SectionContainer class="py-44 pb-24">
+			<img 
+				class="rounded-full size-24 mb-4"
+				src="https://avatars.githubusercontent.com/u/124883232?v=4" 
+				alt="foto perfil"
+			/>
+			<h1 class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb-6 lg:pb-10">
+				Hey, soy Ger 
+				<a 
+					href="https://www.linkedin.com/in/germ%C3%A1n-casesnoves-serrano-58a4a62b0/"
+					target="_blank"
+					rel="noopener"
+					class="flex justify-center items-center"
+				>
+					<Badge>Disponible para trabajar</Badge>
+				</a>
+			</h1>
+			<h2 class="text-xl lg:text-2xl text-wrap flex flex-col max-w-[700px]">
+				<span> Constructor de Experiencias Web Interactivas.</span>
+				<span class="opacity-80"> De Madrid, España.</span>
+				<span class="text-pretty"> Comprometido con el aprendizaje continuo y la mejora en el desarrollo web.</span>
+			</h2>
+
+			
+			<nav class="flex gap-4 mt-8 flex-wrap">
+				<SocialPill href="https://www.linkedin.com/in/germ%C3%A1n-casesnoves-serrano-58a4a62b0/">
+					<LinkedInIcon class="size-4 md:size-6" />
+					LinkedIn
+				</SocialPill>
+				<SocialPill href="https://github.com/ger2k">
+					<GitHubIcon  class="size-4 md:size-6" />
+					GitHub
+				</SocialPill>
+				<SocialPill href="mailto:musikadicto@gmail.com">
+					<MailIcon  class="size-4 md:size-6" />
+					musikadicto@gmail.com
+				</SocialPill>
+			</nav>		
+		</SectionContainer>
+		<SectionContainer id="experiencia">
+			<h2 class="text-2xl font-semibold mb-6 flex gap-x-3 items-center">
+				<EstudiosIcon class="size-7"/>
+				Formación Académica en Desarrollo Web
+			</h2>
+			<Experience />
+		</SectionContainer>
+		<SectionContainer>
+			<h2 class="text-2xl font-semibold mb-6 flex gap-x-3 items-center">
+				<CodeIcon class="size-7"/>
+				Proyectos
+			</h2>
+			<Projects />
+		</SectionContainer>
+	</main>
+</Layout>
